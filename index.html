@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <main class="todo-container" aria-label="Todo Application">
+    <header>
+      <h1>Todo App</h1>
+      <button id="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+        <span id="theme-icon" aria-hidden="true">🌙</span>
+      </button>
+    </header>
+    <form id="todo-form" aria-label="Add new todo">
+      <label for="new-todo" class="visually-hidden">New Task</label>
+      <input id="new-todo" name="new-todo" type="text" placeholder="Add a new task..." autocomplete="off" required />
+      <button type="submit" aria-label="Add task">Add</button>
+    </form>
+    <nav class="filters" aria-label="Task filters">
+      <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="filter-btn" data-filter="active" aria-pressed="false">Active</button>
+      <button type="button" class="filter-btn" data-filter="completed" aria-pressed="false">Completed</button>
+    </nav>
+    <ul id="todo-list" aria-live="polite">
+      <!-- Todo items go here -->
+    </ul>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
